@@ -1,0 +1,42 @@
+{% include base_path %}
+
+<!-- start custom head snippets -->
+
+<!-- Support for Academicons -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css">
+
+<!-- Support for Font Awesome -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/fontawesome.css">
+
+<meta name="theme-color" content="var(--global-bg-color)"/>
+
+<script>
+  (function() {
+    // Use a single native theme handler from the very first page load.
+    document.addEventListener("click", function(event) {
+      var toggle = event.target.closest && event.target.closest("#theme-toggle");
+      if (!toggle) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      var root = document.documentElement;
+      var newTheme = root.hasAttribute("data-theme") ? "light" : "dark";
+      if (newTheme === "dark") {
+        root.setAttribute("data-theme", "dark");
+      } else {
+        root.removeAttribute("data-theme");
+      }
+
+      try {
+        localStorage.setItem("theme", newTheme);
+      } catch (error) {
+        // Theme switching still works when storage is unavailable.
+      }
+    }, true);
+  }());
+</script>
+
+<!-- end custom head snippets -->

@@ -1,0 +1,17 @@
+# Header navigation links. These anchors keep the site as a single-page homepage.
+
+main:
+  - title: "About me"
+    url: /#about
+
+  - title: "Publications"
+    url: /#publications
+
+  - title: "Proposals"
+    url: /#standardization
+
+  - title: "Competitions"
+    url: /#competitions
+
+  - title: "Honors"
+    url: /#honors
