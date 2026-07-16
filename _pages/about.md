@@ -18,8 +18,8 @@ My research focuses on learned image compression, learned video compression, vid
 ### Education
 
 * Ph.D. candidate, School of Remote Sensing and Information Engineering, Wuhan University, Sep. 2025–present.
-* M.Eng. Candidate, School of Remote Sensing and Information Engineering, Wuhan University, Sep. 2024–Sep. 2025.
-* M.Eng. Candidate, Hubei Luojia Laboratory, Wuhan University, Sep. 2023–Sep. 2024.
+* M.Eng. candidate, School of Remote Sensing and Information Engineering, Wuhan University, Sep. 2024–Sep. 2025.
+* M.Eng. candidate, Hubei Luojia Laboratory, Wuhan University, Sep. 2023–Sep. 2024.
 * B.Eng., School of Computer Science, Wuhan University, Sep. 2019–Jun. 2023.
 
 ## Publications {#publications}
