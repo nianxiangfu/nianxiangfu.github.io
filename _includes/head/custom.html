@@ -12,16 +12,10 @@
 
 <script>
   (function() {
-    // Use a single native theme handler from the very first page load.
-    document.addEventListener("click", function(event) {
-      var toggle = event.target.closest && event.target.closest("#theme-toggle");
-      if (!toggle) {
-        return;
+    window.toggleColorTheme = function(event) {
+      if (event) {
+        event.preventDefault();
       }
-
-      event.preventDefault();
-      event.stopPropagation();
-
       var root = document.documentElement;
       var newTheme = root.hasAttribute("data-theme") ? "light" : "dark";
       if (newTheme === "dark") {
@@ -35,7 +29,7 @@
       } catch (error) {
         // Theme switching still works when storage is unavailable.
       }
-    }, true);
+    };
   }());
 </script>
 

@@ -45,7 +45,7 @@
             {% assign formatted_authors = post.authors | replace: "Nianxiang Fu*", "NIANXIANG_FU_EQUAL" | replace: "Nianxiang Fu", "<strong>Nianxiang Fu</strong>" | replace: "NIANXIANG_FU_EQUAL", "<strong>Nianxiang Fu</strong>*" %}
             <p>{{ formatted_authors }}</p>
           {% endif %}
-          <p><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.{% if post.equal_contribution %} <strong>(*Equal contribution)</strong>{% endif %}{% if post.paperurl %} <a href="{{ post.paperurl }}">[paper]</a>{% endif %}</p>
+          <p><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}.{% if post.equal_contribution %} <strong>(*Equal Contribution)</strong>{% endif %}{% if post.paperurl %} <a href="{{ post.paperurl }}">[paper]</a>{% endif %}</p>
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
