@@ -15,7 +15,7 @@ const browserPref = window.matchMedia && window.matchMedia('(prefers-color-schem
 // Determine the computed theme, which can be "dark" or "light".
 function determineComputedTheme() {
   // Determine the expected state of the theme toggle, which can be "dark", "light", or default "system"
-  let themeSetting = localStorage.getItem("theme");
+  let themeSetting = window.getStoredColorTheme ? window.getStoredColorTheme() : null;
   themeSetting = (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 
   // Return the setting if set, or use the browser preference
@@ -28,9 +28,9 @@ function determineComputedTheme() {
 // Set the theme on page load or when explicitly called
 function setTheme(theme) {
   const use_theme = theme ||
-    localStorage.getItem("theme") ||
+    (window.getStoredColorTheme && window.getStoredColorTheme()) ||
     $("html").attr("data-theme") ||
-    browserPref;
+    (browserPref ? "dark" : "light");
 
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
@@ -45,7 +45,9 @@ function setTheme(theme) {
 function toggleTheme() {
   const current_theme = $("html").attr("data-theme");
   const new_theme = current_theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", new_theme);
+  if (window.setStoredColorTheme) {
+    window.setStoredColorTheme(new_theme);
+  }
   setTheme(new_theme);
   redrawPlotly();
 }
@@ -147,7 +149,7 @@ $(document).ready(function () {
   setTheme();
   window.matchMedia('(prefers-color-scheme: dark)')
         .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
+          if (!window.getStoredColorTheme || !window.getStoredColorTheme()) {
             setTheme(e.matches ? "dark" : "light");
           }
         });
@@ -156,7 +158,7 @@ $(document).ready(function () {
   var bumpIt = function () {
     $("body").css("padding-bottom", "0");
     $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
-  }
+  };
   $(window).resize(function () {
     didResize = true;
   });

@@ -12,6 +12,36 @@
 
 <script>
   (function() {
+    var cookieName = "site-theme";
+
+    window.getStoredColorTheme = function() {
+      try {
+        var localTheme = window.localStorage && window.localStorage.getItem("theme");
+        if (localTheme === "dark" || localTheme === "light") {
+          return localTheme;
+        }
+      } catch (error) {
+        // Fall back to a cookie when storage is blocked.
+      }
+
+      var cookieMatch = document.cookie.match(new RegExp("(?:^|; )" + cookieName + "=([^;]*)"));
+      var cookieTheme = cookieMatch ? decodeURIComponent(cookieMatch[1]) : null;
+      return cookieTheme === "dark" || cookieTheme === "light" ? cookieTheme : null;
+    };
+
+    window.setStoredColorTheme = function(theme) {
+      try {
+        if (window.localStorage) {
+          window.localStorage.setItem("theme", theme);
+          return;
+        }
+      } catch (error) {
+        // Fall back to a cookie when storage is blocked.
+      }
+
+      document.cookie = cookieName + "=" + encodeURIComponent(theme) + "; path=/; max-age=31536000; SameSite=Lax";
+    };
+
     window.toggleColorTheme = function(event) {
       if (event) {
         event.preventDefault();
@@ -23,13 +53,12 @@
       } else {
         root.removeAttribute("data-theme");
       }
-
-      try {
-        localStorage.setItem("theme", newTheme);
-      } catch (error) {
-        // Theme switching still works when storage is unavailable.
-      }
+      window.setStoredColorTheme(newTheme);
     };
+
+    if (window.getStoredColorTheme() === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
   }());
 </script>
 
