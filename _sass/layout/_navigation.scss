@@ -176,6 +176,7 @@
   position: relative;
   min-width: 250px;
   background: var(--global-bg-color);
+  overflow: visible;
 
   a {
     display: block;
@@ -211,7 +212,7 @@
 
       &:first-child {
         font-weight: bold;
-        text-wrap: wrap;
+        white-space: nowrap;
 
         a {
           margin-left: 0;
@@ -288,6 +289,7 @@
     border-radius: $border-radius;
     background: var(--global-bg-color);
     box-shadow: 0 0 10px rgba(#000, 0.25);
+    z-index: 99;
 
     a {
       margin: 0;
