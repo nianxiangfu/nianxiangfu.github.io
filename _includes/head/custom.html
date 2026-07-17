@@ -42,23 +42,37 @@
       document.cookie = cookieName + "=" + encodeURIComponent(theme) + "; path=/; max-age=31536000; SameSite=Lax";
     };
 
-    window.toggleColorTheme = function(event) {
-      if (event) {
-        event.preventDefault();
-      }
+    window.applyColorTheme = function(theme) {
       var root = document.documentElement;
-      var newTheme = root.hasAttribute("data-theme") ? "light" : "dark";
-      if (newTheme === "dark") {
+      if (theme === "dark") {
         root.setAttribute("data-theme", "dark");
       } else {
         root.removeAttribute("data-theme");
       }
-      window.setStoredColorTheme(newTheme);
+
+      var checkbox = document.getElementById("theme-toggle-checkbox");
+      if (checkbox) {
+        checkbox.checked = theme === "dark";
+      }
     };
 
     if (window.getStoredColorTheme() === "dark") {
       document.documentElement.setAttribute("data-theme", "dark");
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var checkbox = document.getElementById("theme-toggle-checkbox");
+      if (!checkbox) {
+        return;
+      }
+
+      checkbox.checked = document.documentElement.hasAttribute("data-theme");
+      checkbox.addEventListener("change", function() {
+        var theme = checkbox.checked ? "dark" : "light";
+        window.applyColorTheme(theme);
+        window.setStoredColorTheme(theme);
+      });
+    });
   }());
 </script>
 

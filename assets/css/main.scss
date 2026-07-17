@@ -77,11 +77,13 @@ body {
   display: none;
 }
 
-html[data-theme="dark"] .theme-icon--sun {
+html[data-theme="dark"] .theme-icon--sun,
+html:has(#theme-toggle-checkbox:checked) .theme-icon--sun {
   display: none;
 }
 
-html[data-theme="dark"] .theme-icon--moon {
+html[data-theme="dark"] .theme-icon--moon,
+html:has(#theme-toggle-checkbox:checked) .theme-icon--moon {
   display: inline-block;
 }
 

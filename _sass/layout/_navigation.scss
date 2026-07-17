@@ -226,11 +226,29 @@
     }
 
     #theme-toggle {
-      a {
+      position: relative;
+
+      .theme-toggle__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+      }
+
+      label {
         width: 25px;
         display: flex;
+        margin: 0;
+        padding: 0.5rem 0;
+        align-items: center;
         justify-content: center;
+        color: var(--global-masthead-link-color);
         cursor: pointer;
+      }
+
+      .theme-toggle__input:focus-visible + label {
+        outline: 2px solid var(--global-link-color);
+        outline-offset: 3px;
       }
     }
 
