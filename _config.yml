@@ -13,10 +13,10 @@ title                    : "Nianxiang Fu"
 title_separator          : "-"
 name                     : &name "Nianxiang Fu"
 description              : &description "Ph.D. student at Wuhan University working on learned image and video coding."   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : "" # Set this to https://[your GitHub username].github.io after creating the GitHub Pages repository.
+url                      : "https://nianxiangfu.github.io" # Canonical production URL used by SEO tags, sitemap, and feeds.
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : ""
+repository               : "nianxiangfu/nianxiangfu.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
