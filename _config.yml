@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Nianxiang Fu"
 title_separator          : "-"
 name                     : &name "Nianxiang Fu"
-description              : &description "Ph.D. candidate at Wuhan University working on learned image and video coding."   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Ph.D. student at Wuhan University working on learned image and video coding."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : "" # Set this to https://[your GitHub username].github.io after creating the GitHub Pages repository.
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "NianxiangFu.png"
   name             : "Nianxiang Fu"
   pronouns         : # example: "she/her"  
-  bio              : "Ph.D. candidate, Wuhan University"
+  bio              : "Ph.D. student, Wuhan University"
   location         : "Wuhan, China"
   employer         : "Wuhan University"
   uri              : # URL

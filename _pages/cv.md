@@ -13,7 +13,7 @@ You can download my full CV here: [NianxiangFu_CV.pdf](/files/NianxiangFu_CV.pdf
 
 Education
 ======
-* Ph.D. candidate in Photogrammetry and Remote Sensing, Wuhan University, Wuhan, China, Sep. 2023 - Jun. 2029 (expected)
+* Ph.D. student in Photogrammetry and Remote Sensing, Wuhan University, Wuhan, China, Sep. 2023 - Jun. 2029 (expected)
 * B.Eng. in Computer Science, Wuhan University, Wuhan, China, Sep. 2019 - Jun. 2023
 
 Research interests

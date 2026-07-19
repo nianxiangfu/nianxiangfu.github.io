@@ -11,15 +11,15 @@ redirect_from:
 
 ### Biography
 
-I am a Ph.D. candidate at the School of Remote Sensing and Information Engineering, Wuhan University, Wuhan, China, supervised by Professor [Zhenzhong Chen](https://zhenzhong-chen.github.io/).
+I am a Ph.D. student at the School of Remote Sensing and Information Engineering, Wuhan University, Wuhan, China, supervised by Professor [Zhenzhong Chen](https://zhenzhong-chen.github.io/).
 
 My research focuses on learned image compression, learned video compression, video transcoding, and neural network-based video coding.
 
 ### Education
 
-* Ph.D. candidate, School of Remote Sensing and Information Engineering, Wuhan University, Sep. 2025–present.
-* M.Eng. candidate, School of Remote Sensing and Information Engineering, Wuhan University, Sep. 2024–Sep. 2025.
-* M.Eng. candidate, Hubei Luojia Laboratory, Wuhan University, Sep. 2023–Sep. 2024.
+* Ph.D. student, School of Remote Sensing and Information Engineering, Wuhan University, Sep. 2025–present.
+* M.Eng. student, School of Remote Sensing and Information Engineering, Wuhan University, Sep. 2024–Sep. 2025.
+* M.Eng. student, Hubei Luojia Laboratory, Wuhan University, Sep. 2023–Sep. 2024.
 * B.Eng., School of Computer Science, Wuhan University, Sep. 2019–Jun. 2023.
 
 ## Publications {#publications}
