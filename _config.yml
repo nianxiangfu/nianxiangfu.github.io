@@ -11,6 +11,7 @@ locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Nianxiang Fu"
 title_separator          : "-"
+seo_title_suffix         : "Homepage"
 name                     : &name "Nianxiang Fu"
 description              : &description "Ph.D. student at Wuhan University working on learned image and video coding."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : "https://nianxiangfu.github.io" # Canonical production URL used by SEO tags, sitemap, and feeds.
